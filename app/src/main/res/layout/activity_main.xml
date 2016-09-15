@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:layout_height="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,36 +14,36 @@
     tools:context="id.sch.smktelkom_mlg.tugas01.xirpl5016.tugas001.MainActivity">
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/linearLayout"
-        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="#00ccff">
+        android:layout_centerVertical="true"
+        android:background="#00ccff"
+        android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView"
-            android:src="@drawable/smk"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/smk" />
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="FORM PENDAFTARAN KEGIATAN"
-            android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
+            android:text="FORM PENDAFTARAN KEGIATAN"
             android:textColor="#000000" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SISWA SMK TELKOM MALANG"
-            android:id="@+id/textView2"
             android:layout_gravity="center_horizontal"
+            android:text="SISWA SMK TELKOM MALANG"
             android:textColor="#000000" />
 
         <android.support.design.widget.TextInputLayout
@@ -51,173 +51,173 @@
             android:layout_height="wrap_content">
 
         <EditText
-            android:hint="NAMA"
+            android:id="@+id/editTextNama"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/editTextNama"
+            android:hint="NAMA"
             android:textColorHint="#000000" />
         </android.support.design.widget.TextInputLayout>
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="KELAS"
-            android:id="@+id/textView3" />
+            android:text="KELAS" />
 
         <Spinner
+            android:id="@+id/spinnerKelas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/Kelas"
-            android:id="@+id/spinnerKelas" />
+            android:entries="@array/Kelas" />
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/editTextNomer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="NOMER ABSEN"
-            android:id="@+id/editTextNomer"
             android:inputType="numberSigned"
             android:textColorHint="#010101" />
         </android.support.design.widget.TextInputLayout>
 
         <TextView
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="JENIS KELAMIN"
-            android:id="@+id/textView4" />
+            android:text="JENIS KELAMIN" />
 
         <RadioGroup
+            android:id="@+id/radioGroupJenis"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/radioGroupJenis">
+            android:layout_height="wrap_content">
 
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Laki-Laki"
                 android:id="@+id/radioButtonLaki"
-                android:checked="true" />
-
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Perempuan"
+                android:checked="true"
+                android:text="Laki-Laki" />
+
+            <RadioButton
                 android:id="@+id/radioButton2"
-                android:checked="false" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:text="Perempuan" />
         </RadioGroup>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:weightSum="1">
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="178dp"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="EKSTRAKULIKULER"
-                    android:id="@+id/textView5" />
+                    android:text="EKSTRAKULIKULER" />
 
                 <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="FO (wajib XI)"
                     android:id="@+id/checkBoxA"
-                    android:checked="true"/>
-
-                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="PRAMUKA (wajib X)"
+                    android:checked="true"
+                    android:text="FO (wajib XI)" />
+
+                <CheckBox
                     android:id="@+id/checkBoxB"
-                    android:checked="true"/>
-
-                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Paduan Suara"
+                    android:checked="true"
+                    android:text="PRAMUKA (wajib X)" />
+
+                <CheckBox
                     android:id="@+id/checkBoxC"
-                    android:checked="false" />
-
-                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tafsir Al Quran"
+                    android:checked="false"
+                    android:text="Paduan Suara" />
+
+                <CheckBox
                     android:id="@+id/checkBoxD"
-                    android:checked="false" />
-
-                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Seni Baca Al Quran"
+                    android:checked="false"
+                    android:text="Tafsir Al Quran" />
+
+                <CheckBox
                     android:id="@+id/checkBoxE"
-                    android:checked="false" />
-
-                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Voli"
+                    android:checked="false"
+                    android:text="Seni Baca Al Quran" />
+
+                <CheckBox
                     android:id="@+id/checkBoxF"
-                    android:checked="false" />
-
-                <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Basket"
+                    android:checked="false"
+                    android:text="Voli" />
+
+                <CheckBox
                     android:id="@+id/checkBoxG"
-                    android:checked="false" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Basket" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ORGANISASI"
-                    android:id="@+id/textView6" />
+                    android:text="ORGANISASI" />
 
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="142dp">
 
                     <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="MPK"
                         android:id="@+id/radioButtonM"
-                        android:checked="true"/>
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="OSIS"
+                        android:checked="true"
+                        android:text="MPK" />
+
+                    <RadioButton
                         android:id="@+id/radioButtonO"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="PUSTEL"
+                        android:checked="false"
+                        android:text="OSIS" />
+
+                    <RadioButton
                         android:id="@+id/radioButtonP"
-                        android:checked="false" />
-
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="DEWAN"
+                        android:checked="false"
+                        android:text="PUSTEL" />
+
+                    <RadioButton
                         android:id="@+id/radioButtonD"
-                        android:checked="false" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="DEWAN" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -225,34 +225,34 @@
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView8" />
+                android:layout_height="wrap_content" />
 
             <Button
+                android:id="@+id/buttonDaftar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="DAFTAR"
-                android:id="@+id/buttonDaftar"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
-                android:background="#ffffff" />
+                android:background="#fbff00"
+                android:text="DAFTAR" />
 
             <TextView
+                android:id="@+id/textView7"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView7" />
+                android:layout_height="wrap_content" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/textViewHasil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true" />
 
